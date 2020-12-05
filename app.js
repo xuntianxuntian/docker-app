@@ -1,13 +1,16 @@
 const express = require('express')
 const dotenv = require('dotenv')
+const os = require('os')
 
+
+const _net = os.networkInterfaces()
 dotenv.config()
 
 const app = express()
 
 const _ENV = process.env
 
-const HOST_NAME = _ENV.HOST_NAME || '127.0.0.1'
+const HOST_NAME = _ENV.HOST_NAME || '0.0.0.0'
 const HOST_PORT = _ENV.HOST_PORT || '3000'
 
 app.use(require('cors')())
@@ -17,9 +20,9 @@ app.use(express.urlencoded({extended:false}))
 
 app.use(
     express.Router().get('/',(req,res) => {
-        const responseStr = 'hello,there!'
-        responseStr.concat(`Your IP address is ${req.ip}.\n`)
-        responseStr.concat(`Your client is ${req.headers["user-agent"]}.\n`)
+        const responseStr = `hello,there!\
+        Your IP address is ${req.ip}.\
+         Your client is ${req.headers["user-agent"]}. \n `
         res.json(responseStr)
     })
 )
