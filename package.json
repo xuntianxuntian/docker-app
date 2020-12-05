@@ -1,0 +1,33 @@
+{
+  "name": "docker-app",
+  "version": "1.0.0",
+  "description": "docker application for learning and testing",
+  "main": "app.js",
+  "scripts": {
+    "dev":"nodemon app.js" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuntianxuntian/docker-app.git"
+  },
+  "keywords": [
+    "app",
+    "node",
+    "docker",
+    "nginx"
+  ],
+  "author": "xixialin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xuntianxuntian/docker-app/issues"
+  },
+  "homepage": "https://github.com/xuntianxuntian/docker-app#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
