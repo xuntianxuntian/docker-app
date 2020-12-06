@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title docker-app
+    body
+        div
+            ul
+                li 
+                    div
+                        h2 Server Info
+                        p server Host: #{server_ip}
+                        p Server Port: #{server_port}
+                li 
+                    div
+                        h2 Client Info
+                        p client Agent: #{client_agent}
+                        p client IP Address: #{client_ip}
+                li 
+                    div
+                        h2 User Info
+                        p user name: #{user.name}
+                        p user id: #{user.id}
